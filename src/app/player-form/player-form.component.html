@@ -1,0 +1,15 @@
+<form [formGroup]="playerForm" (ngSubmit)="submitPlayer()" *ngIf="!submitted" class="form-inline">
+    <div class="form-group mr-3">
+        <label>Nom : </label>
+        <input type="text" class="form-control ml-2" formControlName="name" required>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!playerForm.valid">Prêt à jouer ?</button>
+
+    <div *ngIf="name.touched && name.errors && name.errors.required" class="text-danger">
+        The player name is required
+    </div>
+</form>
+<div class="h3 alert alert-success" *ngIf="submitted">
+  {{ name.value }} est prêt à jouer !
+</div>

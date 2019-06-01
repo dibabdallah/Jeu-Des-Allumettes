@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.match-icon {
+    background: url("assets/match.png");
+    width: 30px;
+    height: 110px;
+    display: inline-block;
+}
+
+.match-icon:nth-child(-n+3) {
+    cursor: pointer;
+}
+
+.match-icon.selected {
+    width: 30px;
+    height: 110px;
+    display: inline-block;
+    background: url("assets/match-selected.png");
+}
